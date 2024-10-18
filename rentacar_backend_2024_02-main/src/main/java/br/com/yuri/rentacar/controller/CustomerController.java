@@ -25,7 +25,7 @@ public class CustomerController {
     private CustomerService customerService;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @Operation(summary = "Cria ou cadastra um novo Customer (cliente)", tags = {"Customer"} responces = {
+    @Operation(summary = "Cria ou cadastra um novo Customer (cliente)", tags = {"Customer"}, responses = {
             @ApiResponse(description = "CREATED", responseCode = "201", content = {@Content(
                     mediaType = "application/json",
                     schema = @Schema(implementation = CustomerDto.class)

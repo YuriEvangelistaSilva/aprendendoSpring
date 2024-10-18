@@ -1,5 +1,7 @@
 server:
   port: 8888
+  ssl:
+    enabled: false
 spring:
   application:
     name: RentaCar
@@ -9,5 +11,13 @@ spring:
     password: postdba
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
       show-sql: true
+springdoc:
+  api-docs:
+    path: /docs
+    pathsToMatch: /api/**
+  swagger-ui:
+    use-root-path: true
+    #disable-swagger-default-url: true
+    path: /docs-ui
